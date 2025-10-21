@@ -30,10 +30,6 @@ OBJ = $(patsubst %,$(ODIR)/%,$(OBJS))
 
 $(ODIR)/%.o: $(SDIR)/%.c
 	$(CC) $(CFLAGS) -c -g -o $@ $^
-$(ODIR)/page.o: page.c
-	mkdir -p $(ODIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
 
 $(ODIR)/%.o: $(SDIR)/%.s
 	$(CC) $(CFLAGS) -c -g -o $@ $^
